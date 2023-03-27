@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*!Fuentes personalizadas*/
+@font-face {
+  font-family: "Delight Coffee", sans-serif;
+  src: url("/Fonts/delight-coffee/Delight Coffee.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Delight Coffee", sans-serif;
+}
+
+body {
+  font-family: "Delight Coffee", sans-serif;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(25,24,37,1) 22%);
+}
+
+/*Estilos para todos los contenedores*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/*header*/
+.header .head {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header .img-logo{
+    width: 90%;
+}
+
+.header .btn-volume{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+
