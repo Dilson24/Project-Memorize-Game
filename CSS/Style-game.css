@@ -46,14 +46,14 @@ body {
   width: 30%;
 }
 .header .time {
-  color: #8460af;
+  color: #fff403;
   font-size: 18px;
   text-align: center;
   width: 10%;
 }
 
 .header .player {
-  color: #00fd9a;
+  color: #00ff53;
   font-size: 18px;
   text-align: center;
   width: 10%;
@@ -69,41 +69,52 @@ body {
   width: 80%;
   height: 83vh;
   padding: 5px;
-  border-radius: 10px;
-  background: #f8f8f8;
+  border-radius: 5px;
+  background: #8560af;
+  background: -webkit-linear-gradient(bottom, #8560af, #00fd9b);
+  background: -moz-linear-gradient(bottom, #8560af, #00fd9b);
+  background: linear-gradient(to top, #8560af, #00fd9b);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .cards,
 .card,
 .view {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards {
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.card{
-    border: 1px solid black;
+.card {
+  background: #ff009e;
+  border-radius: 5%;
+  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0),
+    inset -3px -3px 3px 3px rgb(0, 0, 0);
 }
 .cards .card {
-    cursor: pointer;
-    /* list-style: none;
+  cursor: pointer;
+  /* list-style: none;
     user-select: none;
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d; */
-    height: calc(100% / 6 - 5px);
-    width: calc(100% / 6 - 5px);
+  height: calc(100% / 6 - 5px);
+  width: calc(100% / 6 - 5px);
 }
 
-
+.front-icon {
+  color: #00fd9a;
+  -webkit-text-stroke: 3px black;
+  margin-top: 10px;
+  font-size: 50px;
+}
 
 /*Footer*/
 .footer-content {
@@ -117,3 +128,72 @@ body {
   margin-top: 10px;
   color: #8460af;
 }
+
+/*Estilos menu*/
+/*NOTA LOS ESTILOS DEBEN SER CAMBIADOS PARA ESTAR ACORDES CON EL PRIOYECTO*/
+
+.gear_icon {
+  position: fixed;
+  bottom:  30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  
+}
+
+.setup_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-image: url(../Img/wave-haikei-1.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.5);
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.spread {
+  transform: translate(0);
+}
+
+.setup_menu a {
+  color: #8560af;
+  text-decoration: none;
+  font-size: 20px;
+}
+/*Estilo de los botones*/
+
+.one:hover, .three:hover{
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+  border: 5px solid #ff009e;
+  color: #ff009e;
+  background: none;
+  font-size: 25px;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
+  text-shadow: 1px 1px 2px rgb(255, 0, 158);
+}
+
+.two:hover,.four:hover{
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+  border: 5px solid #fff403;
+  color: #fff403;
+  background: none;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3);
+  text-shadow: 1px 1px 2px rgb(255, 244, 3);
+}
+
+
