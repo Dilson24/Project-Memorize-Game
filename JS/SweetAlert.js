@@ -1,31 +1,9 @@
-//DROP-DOWN MENU FUNCTION
-const gear_icon = document.querySelector('.gear_icon')
-const setup_menu = document.querySelector('.container-menu')
+//SweetAlert's
 
+const botonPedirNombre = document.getElementById('btn-pedir-nombre');
 
-gear_icon.addEventListener('click', () => {
-    setup_menu.classList.toggle("spread")
-})
-
-window.addEventListener('click', e => {
-    if (setup_menu.classList.contains('spread')
-        && e.target != setup_menu && e.target != gear_icon) {
-        console.log('cerrar')
-        setup_menu.classList.toggle("spread")
-    }
-})
-
-
-//GET NAME PLAYER
-const spanNombre = document.getElementById('nombre');
-const nombre = localStorage.getItem('nombre');
-
-if (nombre) {
-    spanNombre.textContent = nombre;
-}
-
-
-document.getElementById("btn-pedir-nombre").addEventListener("click", function () {
+botonPedirNombre.addEventListener('click', () => {
+    const regex = /[^a-zA-Z]/g;
     Swal.fire({
         title: 'Ingresa tu nombre',
         input: 'text',
@@ -39,27 +17,19 @@ document.getElementById("btn-pedir-nombre").addEventListener("click", function (
             if (value.length < 3) { // mínimo de 3 caracteres
                 return 'El nombre debe tener al menos 3 caracteres';
             }
-            if (value.length > 10) { // máximo de 30 caracteres
+            if (value.length > 10) { // máximo de 10 caracteres
                 return 'El nombre no debe tener más de 10 caracteres';
             }
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            mostrarNombre(result.value);
+            localStorage.setItem('nombre', result.value);
+            window.location.href = 'Memorize_game.html';
         }
     });
 });
-function mostrarNombre(nombre) {
-    // Obtener la etiqueta span en HTML
-    const spanNombre = document.getElementById('nombre');
 
-    // Asignar el valor ingresado por el usuario a la etiqueta span
-    spanNombre.textContent = nombre;
-}
-
-
-//HOW TO PLAY
-const btnhdp = document.querySelector('.two');
+const btnhdp = document.querySelector('.btn-htp');
 
 btnhdp.addEventListener('click', () => {
     Swal.fire({

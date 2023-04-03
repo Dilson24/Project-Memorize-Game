@@ -25,7 +25,7 @@
 
         <div class="container player">
             <h3>Jugador</h3>
-            <span class="player-name"></span>
+            <span id="nombre" class="player-name"></span>
         </div>
     </header>
 
@@ -325,20 +325,47 @@
     <footer id="Contacto">
         
         <img class="gear_icon" src="Img/gear_icon.svg" alt="icon-config" />
-        <nav class="setup_menu">
-            <a href="" class="one">Inicio</a>
-            <a href="" class="two">Cambiar dificultad</a>
-            <a href="" class="three">Cambiar nombre</a>
-            <a href="" class="four">Reinicar</a>
-        </nav>
+        <div class="container-menu">
+
+            <nav class="setup_menu">
+                <a href="index.html" class="one">Inicio</a>
+                <a id="" class="two">Como jugar</a>
+                <a href="" class="three">Cambiar dificultad</a>
+                <a id="btn-pedir-nombre" class="four">Cambiar nombre</a>
+                <a href="" class="five">Reinicar</a>
+            </nav>
+            <div class="social-media">
+                <div>
+                    <a href="./" class="social-media-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="./" class="social-media-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="./" class="social-media-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="./" class="social-media-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <div class="contact-us">
             <h3 class="brad">
-                ©2023 Dilson Alexander Cruz Nivia | Todos los derechos reservados.
+                © 2023 Dilson Alexander Cruz Nivia | Todos los derechos reservados.
             </h3>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="Js/App.js"></script>
 </body>
 
