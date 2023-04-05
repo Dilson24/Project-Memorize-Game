@@ -3,7 +3,7 @@
 const botonPedirNombre = document.getElementById('btn-pedir-nombre');
 
 botonPedirNombre.addEventListener('click', () => {
-    const regex = /[^a-zA-Z]/g;
+    
     Swal.fire({
         title: 'Ingresa tu nombre',
         input: 'text',

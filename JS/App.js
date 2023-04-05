@@ -45,6 +45,7 @@ document.getElementById("btn-pedir-nombre").addEventListener("click", function (
         }
     }).then((result) => {
         if (result.isConfirmed) {
+            localStorage.setItem('nombre', result.value);
             mostrarNombre(result.value);
         }
     });
