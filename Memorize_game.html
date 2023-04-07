@@ -13,22 +13,29 @@
 
 <body>
     <header class="header" id="Inicio">
-        <div class="container time">
-            <h3>Tiempo</h3>
-            <span class="timer-minutes">00</span>
-            <span>:</span>
-            <span class="timer-seconds">00</span>
-        </div>
-        </div>
         <div class="container head">
             <img class="img-logo" src="Img/logo.png" alt="Image logo" />
         </div>
+        <div class="container score">
+            <div class="container time">
+                <h3>Tiempo</h3>
+                <span class="timer-minutes">00</span>
+                <span>:</span>
+                <span class="timer-seconds">00</span>
+            </div>
+            <div class="container player">
+                <h3>Jugador</h3>
+                <span id="nombre" class="player-name"></span>
+            </div>
+            <div class="container movimientos">
+                <h3>Movimientos</h3>
+                <span class="moves">0</span>
 
-        <div class="container player">
-            <h3>Jugador</h3>
-            <span id="nombre" class="player-name"></span>
-            <span class="moves">0</span>
+            </div>
+
         </div>
+        </div>
+
     </header>
 
     <div class="container game">
@@ -260,7 +267,7 @@
             <nav class="setup_menu">
                 <a href="index.html" class="one">Inicio</a>
                 <a id="" class="two">Como jugar</a>
-                <a href="" class="three">Cambiar dificultad</a>
+                <a id="select-level" class="three">Cambiar dificultad</a>
                 <a id="btn-pedir-nombre" class="four">Cambiar nombre</a>
                 <a id="reset-button" class="five">Reinicar</a>
             </nav>
