@@ -1,3 +1,23 @@
+//DROP-DOWN MENU FUNCTION
+const gear_icon = document.querySelector('.gear_icon')
+const setup_menu = document.querySelector('.container-menu')
+
+
+gear_icon.addEventListener('click', () => {
+    setup_menu.classList.toggle("spread")
+    pauseTimer()
+})
+
+window.addEventListener('click', e => {
+    if (setup_menu.classList.contains('spread') && e.target != setup_menu && e.target != gear_icon) {
+        setup_menu.classList.toggle("spread")
+        console.log('cerrar')
+        if (test >= 1) {
+            restartTimer();
+        }
+    }
+})
+
 // variables globales
 const startButton = document.querySelector('#select-level');
 let currentLevel;
