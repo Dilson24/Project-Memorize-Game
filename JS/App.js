@@ -1,19 +1,18 @@
-// //DROP-DOWN MENU FUNCTION
-// const gear_icon = document.querySelector('.gear_icon')
-// const setup_menu = document.querySelector('.container-menu')
+//DROP-DOWN MENU FUNCTION
+const gear_icon = document.querySelector('.gear_icon')
+const setup_menu = document.querySelector('.container-menu')
 
 
-// gear_icon.addEventListener('click', () => {
-//     setup_menu.classList.toggle("spread")
-// })
+gear_icon.addEventListener('click', () => {
+    setup_menu.classList.toggle("spread")
+})
 
-// window.addEventListener('click', e => {
-//     if (setup_menu.classList.contains('spread')
-//         && e.target != setup_menu && e.target != gear_icon) {
-//         console.log('cerrar')
-//         setup_menu.classList.toggle("spread")
-//     }
-// })
+window.addEventListener('click', e => {
+    if (setup_menu.classList.contains('spread')
+        && e.target != setup_menu && e.target != gear_icon) {
+            console.log('cerrar') / setup_menu.classList.toggle("spread")
+    }
+})
 
 
 //GET NAME PLAYER
