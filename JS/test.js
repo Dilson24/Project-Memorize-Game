@@ -173,11 +173,16 @@ function voltearCarta(event) {
                 matchedCards++;
                 flippedCards[0].classList.add("matched");
                 flippedCards[1].classList.add("matched");
+                flippedCards[0].querySelector(".back-icon").classList.add("matched-icon"); 
+                flippedCards[1].querySelector(".back-icon").classList.add("matched-icon"); 
                 flippedCards = [];
 
                 if (matchedCards === levels[currentLevel].length) {
                     clearInterval(timer);
-                    alert(`¡Has encontrado todas las parejas usaste ${moves} movimientos!`);
+                    setTimeout(() =>{
+                        
+                        alert(`¡Has encontrado todas las parejas en ${minutes}:${seconds}, usaste ${moves} movimientos!`); // Muestra un mensaje con el tiempo y los movimientos realizados
+                    },1000);
                 }
             } else {
                 setTimeout(() => {

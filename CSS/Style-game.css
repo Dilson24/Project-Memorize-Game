@@ -157,12 +157,20 @@ body {
 .back-view {
   transform: rotateY(180deg);
 }
-.matched {
+.matched{
   /* Estilos para las cartas encontradas */
   /* Por ejemplo, puedes cambiar el color de fondo o agregar un borde */
+  
   background-color: #fff403;
   /* Otros estilos... */
+  
 }
+.matched-icon{
+  
+  color: #ff009e !important;
+  
+}
+
 
 .front-icon, .back-icon{
   margin-top: 10px;
