@@ -65,7 +65,7 @@ btnhdp.addEventListener('click', () => {
     Swal.fire({
         icon: 'info',
         title: '¿Como jugar?',
-        text: "El objetivo del Juego de 'Emparejado2' es que el jugador de la vuelta a pares de cartas iguales. En un turno, si el jugador elige dos cartas cuyos simbolos coincidan, se mostraran los simbolos emparejados. Sin embargo, si el jugador elige dos cartas con simbolos diferentes, ambas volveran a voltearse.El juego termina cuando se han descubierto los 18 pares de cartas iguales.",
+        text: "El objetivo del Juego de 'Emparejado2' es que el jugador de la vuelta a pares de cartas iguales. En un turno, si el jugador elige dos cartas cuyos simbolos coincidan, se mostraran los simbolos emparejados. Sin embargo, si el jugador elige dos cartas con simbolos diferentes, ambas volveran a voltearse. El juego termina cuando se han descubierto los pares de cartas iguales.",
         confirmButtonText: '¡Entendido!',
     });
 });

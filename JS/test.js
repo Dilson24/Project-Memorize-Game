@@ -19,10 +19,10 @@ window.addEventListener('click', e => {
 })
 
 // variables globales
-const startButton = document.querySelector('#select-level');
 let currentLevel;
+const startButton = document.querySelector('#select-level');
 
-startButton.addEventListener('click', function () {
+function selectLevel() {
     // Mostramos el SweetAlert para seleccionar el nivel
     const levels = ["easy", "medium", "hard"];
 
@@ -48,37 +48,17 @@ startButton.addEventListener('click', function () {
             createCardDiv(currentLevel);
         }
     });
+}
+
+startButton.addEventListener('click', () => {
+    selectLevel();
 });
+
 
 /////////////////////////////////////////////////////////////
 // Apenas se recargue la pagina
 window.addEventListener('load', function () {
-    const levels = ["easy", "medium", "hard"];
-    Swal.fire({
-        title: "Selecciona un nivel",
-        input: "select",
-        inputOptions: {
-            easy: "Fácil",
-            medium: "Medio",
-            hard: "Difícil",
-        },
-        inputPlaceholder: "Selecciona un nivel",
-        allowOutsideClick: false, // Evita que el SweetAlert se cierre al hacer clic fuera de él
-        inputValidator: (value) => {
-            if (!value || !levels.includes(value)) {
-                Swal.getConfirmButton().disabled = true; // Deshabilitamos el botón "Confirmar"
-                return "Por favor, selecciona un nivel";
-            } else {
-                Swal.getConfirmButton().disabled = false; // Habilitamos el botón "Confirmar"
-            }
-        },
-    }).then((result) => {
-        if (result.isConfirmed) {
-            currentLevel = result.value;
-            createCardDiv(currentLevel);
-        }
-    });
-
+    selectLevel();
 });
 
 
@@ -152,8 +132,12 @@ let test = 0;
 
 function voltearCarta(event) {
     const card = event.target.closest('.card-' + currentLevel);
+    if (card.classList.contains("back-view")) {
+        return;
+    }
     if (!card.classList.contains("matched") && flippedCards.length < 2) {
         test++
+        console.log(flippedCards)
         if (flippedCards.length === 0 && !timer) {
 
             restartTimer();
@@ -161,40 +145,81 @@ function voltearCarta(event) {
 
         card.classList.toggle("back-view");
         flippedCards.push(card);
-
-
+        if (flippedCards.length === 1) {
+           
+            cardTimeout = setTimeout(() => {
+                if (flippedCards.length === 1) {
+                    card.classList.toggle("back-view");
+                    flippedCards.pop();
+                }
+            }, 5000);
+        } else {
+            
+            clearTimeout(cardTimeout);
+        }
         if (flippedCards.length === 2) {
-
             moves++;
             const icon1 = flippedCards[0].querySelector('.back-icon i').getAttribute('data-icon');
             const icon2 = flippedCards[1].querySelector('.back-icon i').getAttribute('data-icon');
-
             if (icon1 === icon2) {
+
                 matchedCards++;
                 flippedCards[0].classList.add("matched");
                 flippedCards[1].classList.add("matched");
-                flippedCards[0].querySelector(".back-icon").classList.add("matched-icon"); 
-                flippedCards[1].querySelector(".back-icon").classList.add("matched-icon"); 
+                flippedCards[0].querySelector(".back-icon").classList.add("matched-icon");
+                flippedCards[1].querySelector(".back-icon").classList.add("matched-icon");
                 flippedCards = [];
-
                 if (matchedCards === levels[currentLevel].length) {
                     clearInterval(timer);
-                    setTimeout(() =>{
-                        
-                        alert(`¡Has encontrado todas las parejas en ${minutes}:${seconds}, usaste ${moves} movimientos!`); // Muestra un mensaje con el tiempo y los movimientos realizados
-                    },1000);
+                    setTimeout(() => {
+                        Swal.fire({
+                            title: '¡Felicitaciones, has ganado!',
+                            text: `¡Has encontrado todas las parejas en un tiempo de ${minutes}:${seconds}, usaste ${moves} movimientos!`,
+                            showCancelButton: true,
+                            confirmButtonText: 'Reiniciar',
+                            cancelButtonText: 'Canbiar dificultad',
+                            customClass: {
+                                confirmButton: 'btn-play',
+                                cancelButton: 'btn-htp'
+                            },
+                            showClass: {
+                                popup: 'animate__animated animate__fadeInDown'
+                            },
+                            hideClass: {
+                                popup: 'animate__animated animate__fadeOutUp'
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                reiniciarJuego();
+                            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                                selectLevel();
+                            }
+                        });
+                    });
+
+                    document.removeEventListener("visibilitychange", handleVisibilityChange);
+                    test = 0;
                 }
             } else {
                 setTimeout(() => {
+
+
                     flippedCards[0].classList.toggle("back-view");
                     flippedCards[1].classList.toggle("back-view");
                     flippedCards = [];
+
+
                 }, 1000);
+
+
             }
+
         }
+
         document.querySelector('.moves').textContent = moves;
     }
 }
+
 
 const cardsContainer = document.querySelector('.cards');
 cardsContainer.addEventListener('click', voltearCarta);
@@ -240,8 +265,8 @@ function restartTimer() {
 //////////////////////////////////////////////////////////////////////////////////
 
 
-// Detectar cuando la ventana no está activa
-document.addEventListener("visibilitychange", function () {
+// Definir la función manejadora de eventos
+function handleVisibilityChange() {
     if (document.hidden) {
         pauseTimer(); // Pausar el contador de tiempo cuando la ventana no está activa
     } else {
@@ -250,7 +275,10 @@ document.addEventListener("visibilitychange", function () {
             restartTimer();
         }
     }
-});
+}
+
+// Agregar el evento de escucha
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
 
 ///////////////////////////////////////////////////////////////////////////

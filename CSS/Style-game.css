@@ -163,7 +163,7 @@ body {
   
   background-color: #fff403;
   /* Otros estilos... */
-  
+  cursor: none !important;
 }
 .matched-icon{
   
@@ -336,3 +336,42 @@ body {
   box-shadow: 1px 2px 2px 5px rgb(0, 116, 176);
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
+
+.btn-play {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  padding: 10px 40px 10px 40px;
+  border: 5px solid #ff009e;
+  color: #ff009e;
+  background: none;
+  font-size: 25px;
+  font-family: "Delight Coffee", sans-serif;
+  cursor: pointer;
+}
+
+.btn-play:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
+  text-shadow: 1px 1px 2px rgb(255, 0, 158);
+}
+
+.btn-htp {
+  border-radius: 10px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  padding: 10px 40px 10px 40px;
+  border: 5px solid #fff403;
+  color: #fff403;
+  background: none;
+  font-size: 25px;
+  font-family: "Delight Coffee", sans-serif;
+  cursor: pointer;
+}
+
+.btn-htp:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3);
+  text-shadow: 1px 1px 2px rgb(255, 244, 3);
+}
+
