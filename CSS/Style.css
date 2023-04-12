@@ -19,53 +19,65 @@ h6 {
   font-family: "Delight Coffee", sans-serif;
 }
 
+
+
 body {
+  display: flex; 
+  flex-direction: column;
   font-family: "Delight Coffee", sans-serif;
   background: rgba(25, 24, 37, 1);
   box-shadow: 5px 5px 30px rgba(33, 33, 33, 1);
+  height: 100vh;
 }
 
 /*Estilos para todos los contenedores*/
-.container {
-  width: 100%;
-  max-width: 1200px;
-  overflow: hidden;
-  margin: auto;
+
+.header, .buttons, .footer-content{
+  flex: 0 0 auto;
 }
 
-/*header*/
-.header .head {
-  padding: 0;
+body > footer {
+  margin-top: auto;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
+} */
+
+/*header*/
+.header, .head {
   display: flex;
   justify-content: center;
+  align-items: center;
+  
 }
 
 .header .img-logo {
-  display: block;
-  margin-top: 56px;
-  width: 90%;
-  height: 36vh;
+ 
+  max-width: 90%;
+  height: auto;
+  
 }
 
 /*section buttons*/
 
-.buttons {
+.buttons{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
- }
+  
+}
 
 .container-button {
-  display: inline-block;
-  margin: 13px;
-  padding: 5px;
+  margin-top: 2%;
+} 
+.btn-htp,.btn-play{
+  margin: 10px;
 }
 .btn-play {
-  display: inline-block;
-  text-decoration: none;
   border-radius: 10px;
   /* Arriba | Derecha | Abajo | Izquierda */
   padding: 10px 40px 10px 40px;
@@ -109,19 +121,19 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .social-media {
-  width: 50%;
+  width: 47%; 
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px;
 }
 .social-media-icon {
-  display: inline-block;
+  
   /* Arriba | Derecha | Abajo | Izquierda */
-  margin: 0 20px 0 20px;
+  margin: 0 10px 0 10px;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -149,10 +161,8 @@ body {
 .social-media-icon .fa-instagram:hover {
   color: #fff;
   background: rgba(221, 41, 111, 1);
-
   border-radius: 50%;
   box-shadow: 1px 2px 2px 5px rgba(221, 41, 111, 1);
-
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
   font-size: 35px;
   transform: scale(1.1);
@@ -191,4 +201,132 @@ body {
   color: #8460af;
 }
 
-/*Estilos 'Memorize-game.html'*/
+/*styles sweetalert2*/
+
+.swal2-popup {
+  background: rgba(25, 24, 37, 1) !important;
+}
+
+.swal2-title {
+  color: #00fd9a !important;
+}
+
+.swal2-html-container {
+  color: #8560af !important;
+}
+
+.swal2-input {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #8460af !important;
+  background-color: #2c3e50 !important;
+  font-family: "Delight Coffee", sans-serif !important;
+}
+
+.swal2-confirm {
+  border-radius: 10px !important;
+  padding: 10px 40px 5px 40px !important;
+  margin: 20px !important;
+  line-height: 1 !important;
+  border: 5px solid #ff009e !important;
+  color: #ff009e !important;
+  background: none !important;
+  font-family: "Delight Coffee", sans-serif !important;
+  font-size: 25px !important;
+}
+
+.swal2-confirm:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
+  text-shadow: 1px 1px 2px rgb(255, 0, 158);
+}
+
+.swal2-styled.swal2-cancel {
+  border-radius: 10px !important;
+  border: 5px solid #fff403 !important;
+  padding: 10px 40px 5px 40px;
+  line-height: 1;
+  color: #fff403 !important;
+  background: none !important;
+  font-size: 25px !important;
+  font-family: "Delight Coffee", sans-serif;
+}
+
+.swal2-cancel:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3) !important;
+  text-shadow: 1px 1px 2px rgb(255, 244, 3) !important;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1100px) {
+ 
+
+
+  .container-button {
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40vh;
+    margin: auto;
+    
+  }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+ 
+  .img-logo {
+    height: 40vh !important;
+  }
+
+}
+
+@media screen and (max-width: 589px) {
+ 
+  .buttons{
+    margin: 5%;
+  }
+
+  .container-button {
+    margin-top: 10%;
+    width: 74%;
+    height: 20vh;
+    
+  }
+
+  .btn-htp,.btn-play{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .social-media{
+  
+   width: 100%;
+    
+  }
+  .social-media{
+  
+    margin: 0 0 0 0;
+     
+   }
+  .brad {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 360px) {
+ 
+
+
+  .container-button {
+   
+    width: 90%;
+    
+  }
+
+
+}

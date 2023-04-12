@@ -38,7 +38,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
 }
 .header .head {
   justify-content: center;
@@ -48,27 +47,24 @@ body {
   width: 100%;
   height: 6vh;
 }
-.header .score{
+.header .score {
   display: flex;
   justify-content: space-around;
   width: 80%;
 
   text-align: center;
 }
-.score h3{
+.score h3 {
   display: block;
-  color: #8560af
+  color: #8560af;
 }
-.score span{
-  color:  #00ff53;
+.score span {
+  color: #00ff53;
 }
-
 
 .header .player-name {
   text-transform: uppercase;
 }
-
-
 
 /*Game*/
 
@@ -91,7 +87,6 @@ body {
   justify-content: center;
 }
 
-
 .cards {
   justify-content: space-between;
   width: 100%;
@@ -113,9 +108,10 @@ body {
   height: calc(100% / 6 - 5px);
   background: #ff009e;
   border-radius: 5%;
-  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0), inset -3px -3px 3px 3px rgb(0, 0, 0);
+  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0),
+    inset -3px -3px 3px 3px rgb(0, 0, 0);
   transition: transform 0.5s;
-  transform-style: preserve-3d;  
+  transform-style: preserve-3d;
   cursor: pointer;
 }
 .card-medium {
@@ -124,9 +120,10 @@ body {
   height: calc(100% / 4 - 5px);
   background: #ff009e;
   border-radius: 5%;
-  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0), inset -3px -3px 3px 3px rgb(0, 0, 0);
+  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0),
+    inset -3px -3px 3px 3px rgb(0, 0, 0);
   transition: transform 0.5s;
-  transform-style: preserve-3d;  
+  transform-style: preserve-3d;
   cursor: pointer;
 }
 .card-easy {
@@ -135,18 +132,21 @@ body {
   height: calc(100% / 4 - 5px);
   background: #ff009e;
   border-radius: 5%;
-  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0), inset -3px -3px 3px 3px rgb(0, 0, 0);
+  box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0),
+    inset -3px -3px 3px 3px rgb(0, 0, 0);
   transition: transform 0.5s;
-  transform-style: preserve-3d;  
+  transform-style: preserve-3d;
   cursor: pointer;
 }
-.hard{ /*tamaño de los iconos en nivel hard*/
-  font-size: 50px
+.hard {
+  /*tamaño de los iconos en nivel hard*/
+  font-size: 50px;
 }
-.medium{ /*tamaño de los iconos en nivel medio*/
+.medium {
+  /*tamaño de los iconos en nivel medio*/
   font-size: 65px;
 }
-.easy{
+.easy {
   font-size: 70px;
 }
 /*///////////////////////////////////////////*/
@@ -157,22 +157,20 @@ body {
 .back-view {
   transform: rotateY(180deg);
 }
-.matched{
+.matched {
   /* Estilos para las cartas encontradas */
   /* Por ejemplo, puedes cambiar el color de fondo o agregar un borde */
-  
+
   background-color: #fff403;
   /* Otros estilos... */
   cursor: none !important;
 }
-.matched-icon{
-  
+.matched-icon {
   color: #ff009e !important;
-  
 }
 
-
-.front-icon, .back-icon{
+.front-icon,
+.back-icon {
   margin-top: 10px;
   color: #00fd9a;
   -webkit-text-stroke: 3px black;
@@ -337,41 +335,116 @@ body {
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
-.btn-play {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 10px;
-  /* Arriba | Derecha | Abajo | Izquierda */
-  padding: 10px 40px 10px 40px;
-  border: 5px solid #ff009e;
-  color: #ff009e;
-  background: none;
-  font-size: 25px;
-  font-family: "Delight Coffee", sans-serif;
-  cursor: pointer;
+/*styles sweetalert2*/
+
+.swal2-popup {
+  background: rgba(25, 24, 37, 1) !important;
 }
 
-.btn-play:hover {
+.swal2-title {
+  color: #00FD9A !important;
+}
+
+.swal2-html-container {
+  color: #8560af !important;
+}
+
+
+
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+select {
+  
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #8460AF;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Delight Coffee", sans-serif;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  display: flex;
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+.select option:checked {
+  color: #00FD9A; 
+}
+
+
+
+
+
+
+
+
+.swal2-confirm {
+  border-radius: 10px !important;
+  padding: 10px 40px 5px 40px !important;
+  margin: 30px !important;
+  line-height: 1 !important;
+  border: 5px solid #ff009e !important;
+  color: #ff009e !important;
+  background: none !important;
+  font-family: "Delight Coffee", sans-serif !important;
+  font-size: 25px !important;
+}
+
+.swal2-confirm:hover {
   transform: scale(1.1);
   box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
   text-shadow: 1px 1px 2px rgb(255, 0, 158);
 }
 
-.btn-htp {
-  border-radius: 10px;
-  /* Arriba | Derecha | Abajo | Izquierda */
-  padding: 10px 40px 10px 40px;
-  border: 5px solid #fff403;
-  color: #fff403;
-  background: none;
-  font-size: 25px;
+.swal2-styled.swal2-cancel {
+  border-radius: 10px !important;
+  border: 5px solid #fff403 !important;
+  padding: 10px 40px 5px 40px;
+  line-height: 1;
+  color: #fff403 !important;
+  background: none !important;
+  font-size: 25px !important;
   font-family: "Delight Coffee", sans-serif;
-  cursor: pointer;
 }
 
-.btn-htp:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3);
-  text-shadow: 1px 1px 2px rgb(255, 244, 3);
+.swal2-cancel:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3) !important;
+  text-shadow: 1px 1px 2px rgb(255, 244, 3) !important;
 }
-

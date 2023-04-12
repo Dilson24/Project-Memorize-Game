@@ -23,24 +23,32 @@ let currentLevel;
 const startButton = document.querySelector('#select-level');
 
 function selectLevel() {
-    // Mostramos el SweetAlert para seleccionar el nivel
+
     const levels = ["easy", "medium", "hard"];
 
     Swal.fire({
         title: "Selecciona un nivel",
-        input: "select",
-        inputOptions: {
-            easy: "Fácil",
-            medium: "Medio",
-            hard: "Difícil",
-        },
-        inputPlaceholder: "Selecciona un nivel",
+        html:
+            '<div class="select">'+
+            '<select id="my-select" class="my-select-class">' +
+            '<option value="" >Selecciona un nivel</option>' +
+            '<option value="easy">Facil</option>' +
+            '<option value="medium">Medio</option>' +
+            '<option value="hard">Dificil</option>' +
+            '</select>' +
+            "</div>",
         showCancelButton: true,
-        allowOutsideClick: false, // Evita que el SweetAlert se cierre al hacer clic fuera de él
-        inputValidator: (value) => {
-            if (!value || !levels.includes(value)) {
-                return "Por favor, selecciona un nivel";
+        cancelButtonText: 'Cancelar',
+        allowOutsideClick: false,
+        customClass: {
+            confirmButton: 'swal2-confirm'
+          },
+        preConfirm: () => {
+            const selectValue = document.getElementById("my-select").value;
+            if (!selectValue || !levels.includes(selectValue)) {
+                Swal.showValidationMessage("Por favor, selecciona un nivel");
             }
+            return selectValue;
         },
     }).then((result) => {
         if (result.isConfirmed) {
@@ -48,6 +56,8 @@ function selectLevel() {
             createCardDiv(currentLevel);
         }
     });
+
+
 }
 
 startButton.addEventListener('click', () => {
@@ -82,12 +92,12 @@ let container = document.querySelector('.cards');
 
 function createCardDiv(currentLevel) {
 
-    // Eliminar todas las cartas existentes antes de dibujar nuevas cartas
+
     while (container.firstChild) {
         container.removeChild(container.firstChild);
-        // Detener el contador de tiempo
+
         clearInterval(timer);
-        // Reiniciar variables y elementos del juego
+
         flippedCards = [];
         matchedCards = 0;
         moves = 0;
@@ -95,7 +105,7 @@ function createCardDiv(currentLevel) {
         minutes = 0;
         test = 0;
         timer = null;
-        // Actualizar elementos en la interfaz de usuario
+
         document.querySelector('.timer-minutes').textContent = '00';
         document.querySelector('.timer-seconds').textContent = '00';
         document.querySelector('.moves').textContent = '0';
@@ -104,7 +114,7 @@ function createCardDiv(currentLevel) {
 
     const cards = levels[currentLevel];
 
-    // Duplicar y mezclar aleatoriamente el arreglo
+
     const shuffledCards = cards.concat(cards).sort(() => Math.random() - 0.5);
 
     shuffledCards.forEach((card) => {
@@ -146,15 +156,15 @@ function voltearCarta(event) {
         card.classList.toggle("back-view");
         flippedCards.push(card);
         if (flippedCards.length === 1) {
-           
+
             cardTimeout = setTimeout(() => {
                 if (flippedCards.length === 1) {
                     card.classList.toggle("back-view");
                     flippedCards.pop();
                 }
-            }, 5000);
+            }, 8000);
         } else {
-            
+
             clearTimeout(cardTimeout);
         }
         if (flippedCards.length === 2) {
@@ -178,10 +188,7 @@ function voltearCarta(event) {
                             showCancelButton: true,
                             confirmButtonText: 'Reiniciar',
                             cancelButtonText: 'Canbiar dificultad',
-                            customClass: {
-                                confirmButton: 'btn-play',
-                                cancelButton: 'btn-htp'
-                            },
+
                             showClass: {
                                 popup: 'animate__animated animate__fadeInDown'
                             },
@@ -227,11 +234,11 @@ cardsContainer.addEventListener('click', voltearCarta);
 ////////////////////////////////////////////////////////////////////
 
 
-let timer; // variable para almacenar el identificador del intervalo del contador
-let seconds = 0; // variable para almacenar los segundos
-let minutes = 0; // variable para almacenar los minutos
+let timer;
+let seconds = 0;
+let minutes = 0;
 
-// Función para actualizar el contador de tiempo
+
 function updateTimer() {
     seconds++;
     if (seconds === 60) {
@@ -242,7 +249,7 @@ function updateTimer() {
     document.querySelector('.timer-seconds').textContent = padNumber(seconds);
 }
 
-// Función para añadir un cero a la izquierda si el número tiene un solo dígito
+
 function padNumber(number) {
     return String(number).padStart(2, '0');
 }
@@ -250,13 +257,13 @@ function padNumber(number) {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-// Función para pausar el contador de tiempo
+
 function pauseTimer() {
     clearInterval(timer);
     timer = null;
 }
 
-// Función para reiniciar el contador de tiempo
+
 function restartTimer() {
     clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
@@ -265,31 +272,31 @@ function restartTimer() {
 //////////////////////////////////////////////////////////////////////////////////
 
 
-// Definir la función manejadora de eventos
+
 function handleVisibilityChange() {
     if (document.hidden) {
-        pauseTimer(); // Pausar el contador de tiempo cuando la ventana no está activa
+        pauseTimer();
     } else {
-        // Reiniciar el contador de tiempo cuando la ventana vuelve a estar activa
+
         if (test >= 1) {
             restartTimer();
         }
     }
 }
 
-// Agregar el evento de escucha
+
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
 
 ///////////////////////////////////////////////////////////////////////////
 
-// Agrega un evento click al botón de reinicio
+
 document.getElementById("reset-button").addEventListener("click", reiniciarJuego);
-// Función de reinicio
+
 function reiniciarJuego() {
-    // Detener el contador de tiempo
+
     clearInterval(timer);
-    // Reiniciar variables y elementos del juego
+
     flippedCards = [];
     matchedCards = 0;
     moves = 0;
@@ -297,11 +304,11 @@ function reiniciarJuego() {
     minutes = 0;
     test = 0;
     timer = null;
-    // Actualizar elementos en la interfaz de usuario
+
     document.querySelector('.timer-minutes').textContent = '00';
     document.querySelector('.timer-seconds').textContent = '00';
     document.querySelector('.moves').textContent = '0';
-    // Desvoltear todas las cartas
+
     const cards = document.querySelectorAll('.card-' + currentLevel);
     cards.forEach(card => {
         card.classList.remove('back-view', 'matched');

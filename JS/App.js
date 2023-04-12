@@ -35,10 +35,10 @@ document.getElementById("btn-pedir-nombre").addEventListener("click", function (
             if (!/^[a-zA-Z0-9]*$/g.test(value)) {
                 return 'Solo se permiten letras';
             }
-            if (value.length < 3) { // mínimo de 3 caracteres
+            if (value.length < 3) {
                 return 'El nombre debe tener al menos 3 caracteres';
             }
-            if (value.length > 10) { // máximo de 30 caracteres
+            if (value.length > 10) {
                 return 'El nombre no debe tener más de 10 caracteres';
             }
         }
@@ -50,10 +50,10 @@ document.getElementById("btn-pedir-nombre").addEventListener("click", function (
     });
 });
 function mostrarNombre(nombre) {
-    // Obtener la etiqueta span en HTML
+
     const spanNombre = document.getElementById('nombre');
 
-    // Asignar el valor ingresado por el usuario a la etiqueta span
+
     spanNombre.textContent = nombre;
 }
 
@@ -64,8 +64,8 @@ const btnhdp = document.querySelector('.two');
 btnhdp.addEventListener('click', () => {
     Swal.fire({
         icon: 'info',
-        title: '¿Como jugar?',
-        text: "El objetivo del Juego de 'Emparejado2' es que el jugador de la vuelta a pares de cartas iguales. En un turno, si el jugador elige dos cartas cuyos simbolos coincidan, se mostraran los simbolos emparejados. Sin embargo, si el jugador elige dos cartas con simbolos diferentes, ambas volveran a voltearse. El juego termina cuando se han descubierto los pares de cartas iguales.",
+        title: 'Como jugar',
+        text: "El objetivo del Juego de 'Emparejado2' es que el jugador de la vuelta a pares de cartas iguales. En un turno, si el jugador elige dos cartas cuyos simbolos coincidan, se mostraran los simbolos emparejados. Sin embargo, si el jugador elige dos cartas con simbolos diferentes, ambas volveran a voltearse. El juego termina cuando se han descubierto todos los pares de cartas iguales.",
         confirmButtonText: '¡Entendido!',
     });
 });
