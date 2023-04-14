@@ -12,7 +12,7 @@ window.addEventListener('click', e => {
     if (setup_menu.classList.contains('spread') && e.target != setup_menu && e.target != gear_icon) {
         setup_menu.classList.toggle("spread")
         console.log('cerrar')
-        if (test >= 1) {
+        if (test > 0) {
             restartTimer();
         }
     }
@@ -29,7 +29,7 @@ function selectLevel() {
     Swal.fire({
         title: "Selecciona un nivel",
         html:
-            '<div class="select">'+
+            '<div class="select">' +
             '<select id="my-select" class="my-select-class">' +
             '<option value="" >Selecciona un nivel</option>' +
             '<option value="easy">Facil</option>' +
@@ -40,9 +40,11 @@ function selectLevel() {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
         customClass: {
             confirmButton: 'swal2-confirm'
-          },
+        },
         preConfirm: () => {
             const selectValue = document.getElementById("my-select").value;
             if (!selectValue || !levels.includes(selectValue)) {
@@ -50,17 +52,27 @@ function selectLevel() {
             }
             return selectValue;
         },
+        didOpen: () => {
+            pauseTimer();
+        }
     }).then((result) => {
         if (result.isConfirmed) {
             currentLevel = result.value;
             createCardDiv(currentLevel);
+        } else {
+            if (test > 0) {
+                restartTimer();
+            }
         }
     });
+
+
 
 
 }
 
 startButton.addEventListener('click', () => {
+
     selectLevel();
 });
 
@@ -187,7 +199,7 @@ function voltearCarta(event) {
                             text: `¡Has encontrado todas las parejas en un tiempo de ${minutes}:${seconds}, usaste ${moves} movimientos!`,
                             showCancelButton: true,
                             confirmButtonText: 'Reiniciar',
-                            cancelButtonText: 'Canbiar dificultad',
+                            cancelButtonText: 'Cambiar dificultad',
 
                             showClass: {
                                 popup: 'animate__animated animate__fadeInDown'
@@ -278,7 +290,7 @@ function handleVisibilityChange() {
         pauseTimer();
     } else {
 
-        if (test >= 1) {
+        if (test > 0) {
             restartTimer();
         }
     }

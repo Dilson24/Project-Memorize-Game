@@ -19,18 +19,25 @@ h6 {
   font-family: "Delight Coffee", sans-serif;
 }
 
+/*Estilos para todos los contenedores*/
 body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-family: "Delight Coffee", sans-serif;
   background: rgba(25, 24, 37, 1);
-  box-shadow: 5px 5px 30px rgba(33, 33, 33, 1);
+  height: 100vh;
+}
+body > .brad {
+  position: fixed;
+ 
+  
 }
 
-/*Estilos para todos los contenedores*/
-.container {
-  width: 100%;
-  max-width: 1200px;
-  overflow: hidden;
-  margin: auto;
+.header,
+.game,
+.footer-content {
+  flex: 0 0 auto;
 }
 
 /*header*/
@@ -38,6 +45,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: auto;
 }
 .header .head {
   justify-content: center;
@@ -49,16 +57,22 @@ body {
 }
 .header .score {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 80%;
 
   text-align: center;
 }
 .score h3 {
   display: block;
+  text-shadow: -2px 2px 5px #8460af;
+  letter-spacing: 0.1em;
   color: #8560af;
+  -webkit-text-stroke: 1px #191825;
 }
 .score span {
+  text-shadow: -2px 2px 5px #00ff53;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 1px #191825;
   color: #00ff53;
 }
 
@@ -69,9 +83,12 @@ body {
 /*Game*/
 
 .game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
-  height: 79.5vh;
-  padding: 5px;
+  height: 80vh;
+  margin: auto;
   border-radius: 5px;
   background: #8560af;
   background: -webkit-linear-gradient(bottom, #8560af, #00fd9b);
@@ -134,7 +151,7 @@ body {
   border-radius: 5%;
   box-shadow: inset 3px 3px 3px 3px rgb(0, 0, 0),
     inset -3px -3px 3px 3px rgb(0, 0, 0);
-  transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
   transform-style: preserve-3d;
   cursor: pointer;
 }
@@ -156,7 +173,11 @@ body {
 
 .back-view {
   transform: rotateY(180deg);
+  transition: transform 0.5s ease-in-out; 
 }
+
+
+
 .matched {
   /* Estilos para las cartas encontradas */
   /* Por ejemplo, puedes cambiar el color de fondo o agregar un borde */
@@ -179,13 +200,17 @@ body {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-}
+ }
 
 .brad {
-  margin-top: 10px;
   text-align: center;
+  text-shadow: -2px 2px 5px #8460af;
+  letter-spacing: 0.1em;
+  margin: 2px;
   color: #8460af;
+}
+.brad span {
+  -webkit-text-stroke: 1px #191825;
 }
 
 /*Estilos menu*/
@@ -199,29 +224,22 @@ body {
   cursor: pointer;
   border-radius: 15px;
   background-color: transparent;
-  border: 2px solid  #00FF53;
-  box-shadow: 0 0 0px 1px  #00FF53,
-    0 0 10px 2px  #00FF53,
-    inset 0 0 0px 1px  #00FF53,
-    inset 0 0 10px 2px  #00FF53;
+  border: 2px solid #00ff53;
+  box-shadow: 0 0 0px 1px #00ff53, 0 0 10px 2px #00ff53,
+    inset 0 0 0px 1px #00ff53, inset 0 0 10px 2px #00ff53;
   transition: 100ms;
 }
 .gear_icon:hover {
-  box-shadow: 0 0 0px 1px  #00FF53,
-    0 0 10px 2px  #00FF53,
-    inset 0 0 0px 1px  #00FF53
-    inset 0 0 30px 2px  #00FF53;
-    transform: translateY(-5px);
+  box-shadow: 0 0 0px 1px #00ff53, 0 0 10px 2px #00ff53,
+    inset 0 0 0px 1px #00ff53 inset 0 0 30px 2px #00ff53;
+  transform: translateY(-5px);
 }
 
 .gear_icon:active {
-  box-shadow: 0 0 0px 1px  #00FF53,
-    0 0 25px 2px  #00FF53,
-    inset 0 0 0px 1px  #00FF53,
-    inset 0 0 30px 2px  #00FF53;
+  box-shadow: 0 0 0px 1px #00ff53, 0 0 25px 2px #00ff53,
+    inset 0 0 0px 1px #00ff53, inset 0 0 30px 2px #00ff53;
   transform: translateY(1px);
 }
-
 
 .container-menu {
   display: flex;
@@ -269,6 +287,9 @@ body {
   margin: 0 20px 0 20px;
   text-align: center;
   color: rgb(133, 96, 175);
+  text-shadow: -2px 2px 5px #8460af;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 1px #191825;
 }
 
 .social-media-icon i {
@@ -276,36 +297,60 @@ body {
   line-height: 55px;
 }
 .setup_menu a {
+  text-shadow: -2px 2px 5px #8460af;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 1px #191825;
   color: #8560af;
   text-decoration: none;
   font-size: 25px;
+  font-weight: bold;
+  transition: 100ms;
 }
 
 /*Estilo de los botones*/
 .one:hover,
 .three:hover,
 .five:hover {
-  padding: 10px 40px 10px 40px;
-  border-radius: 10px;
-  border: 5px solid #ff009e;
-  font-size: 25px;
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+  border-radius: 15px;
   color: #ff009e;
-  background: none;
-  box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
-  text-shadow: 1px 1px 2px rgb(255, 0, 158);
-  transform: scale(1.1);
+  letter-spacing: 0.3em;
+  text-shadow: -2px 2px 5px #ff009e;
+  -webkit-text-stroke: 1px #191825;
+  background-color: transparent;
+  border: 2px solid #ff009e;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
+  transform: translateY(-5px);
+}
+.one:active,
+.three:active,
+.five:active {
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 25px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
+  transform: translateY(1px);
 }
 
 .two:hover,
 .four:hover {
-  padding: 10px 40px 10px 40px;
-  border-radius: 10px;
-  border: 5px solid #fff403;
+  padding: 10px 30px 10px 30px;
+  border-radius: 15px;
   color: #fff403;
-  background: none;
-  text-shadow: 1px 1px 2px rgb(255, 244, 3);
-  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3);
-  transform: scale(1.1);
+  letter-spacing: 0.3em;
+  text-shadow: -2px 2px 5px #fff403;
+  -webkit-text-stroke: 1px #191825;
+  background-color: transparent;
+  border: 2px solid #fff403;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
+  transform: translateY(-5px);
+}
+.two:active,
+.four:active {
+  box-shadow: 0 0 0px 1px #fff403, 0 0 25px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
+  transform: translateY(1px);
 }
 
 .social-media-icon .fa-facebook-f:hover {
@@ -319,6 +364,7 @@ body {
   box-shadow: 1px 2px 2px 5px rgb(14, 140, 233);
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
   transform: scale(1.1);
+  -webkit-text-stroke: 0;
 }
 
 .social-media-icon .fa-instagram:hover {
@@ -332,6 +378,7 @@ body {
   box-shadow: 1px 2px 2px 5px rgba(221, 41, 111, 1);
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
   transform: scale(1.1);
+  -webkit-text-stroke: 0;
 }
 
 .social-media-icon .fa-github:hover {
@@ -345,6 +392,7 @@ body {
   box-shadow: 1px 2px 2px 5px rgb(0, 0, 0);
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
   transform: scale(1.1);
+  -webkit-text-stroke: 0;
 }
 .social-media-icon .fa-linkedin-in:hover {
   width: 50px;
@@ -357,6 +405,7 @@ body {
   transform: scale(1.1);
   box-shadow: 1px 2px 2px 5px rgb(0, 116, 176);
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  -webkit-text-stroke: 0;
 }
 
 /*styles sweetalert2*/
@@ -367,10 +416,23 @@ body {
 
 .swal2-title {
   color: #00fd9a !important;
+  text-shadow: -2px 2px 5px #00fd9a !important;
+   -webkit-text-stroke: 1px #191825 !important;
 }
 
 .swal2-html-container {
   color: #8560af !important;
+   text-shadow: -2px 2px 5px #8560af !important;
+   -webkit-text-stroke: 1px #191825 !important;
+}
+
+.swal2-input {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #8460af !important;
+  background-color: #2c3e50 !important;
+  font-family: "Delight Coffee", sans-serif !important;
 }
 
 :root {
@@ -415,13 +477,14 @@ select::-ms-expand {
   top: 0;
   right: 0;
   padding: 1em;
+  color: #00ff53;
   background-color: #34495e;
   transition: 0.25s all ease;
   pointer-events: none;
 }
 /* Transition */
 .select:hover::after {
-  color: #f39c12;
+  color: #8460af;
 }
 
 .select option:checked {
@@ -429,36 +492,78 @@ select::-ms-expand {
 }
 
 .swal2-confirm {
-  border-radius: 10px !important;
-  padding: 10px 40px 5px 40px !important;
-  margin: 30px !important;
-  line-height: 1 !important;
-  border: 5px solid #ff009e !important;
-  color: #ff009e !important;
-  background: none !important;
   font-family: "Delight Coffee", sans-serif !important;
+  padding: 10px 40px 10px 40px !important;
   font-size: 25px !important;
+  font-weight: bold !important;
+  border-radius: 15px !important;
+  color: #FF009E !important;
+  letter-spacing: 0.3em !important;
+  text-shadow: -2px 2px 5px #FF009E !important;
+  -webkit-text-stroke: 1px #191825 !important;
+  background-color: transparent !important;
+  border: 2px solid #FF009E !important;
+  box-shadow: 0 0 0px 1px #FF009E,
+    0 0 10px 2px #FF009E,
+    inset 0 0 0px 1px #FF009E,
+    inset 0 0 10px 2px #FF009E !important;
+  transition: 100ms !important;
 }
 
+.swal2-confirm:hover {
+  box-shadow: 0 0 0px 1px #FF009E,
+    0 0 10px 2px #FF009E,
+    inset 0 0 0px 1px #FF009E,
+    inset 0 0 30px 2px #FF009E !important;
+  text-shadow: 0 0 10px #FF009E !important;
+  transform: translateY(-5px) !important;
+}
+.swal2-confirm:active {
+  box-shadow: 0 0 0px 1px #FF009E,
+    0 0 25px 2px #FF009E,
+    inset 0 0 0px 1px #FF009E,
+    inset 0 0 30px 2px #FF009E !important;
+  transform: translateY(1px) !important;
+}
 .swal2-confirm:hover {
   transform: scale(1.1);
   box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
   text-shadow: 1px 1px 2px rgb(255, 0, 158);
 }
 
-.swal2-styled.swal2-cancel {
-  border-radius: 10px !important;
-  border: 5px solid #fff403 !important;
-  padding: 10px 40px 5px 40px;
-  line-height: 1;
-  color: #fff403 !important;
-  background: none !important;
+
+.swal2-cancel {
+  font-family: "Delight Coffee", sans-serif !important;
+  padding: 10px 40px 10px 40px !important;
   font-size: 25px !important;
-  font-family: "Delight Coffee", sans-serif;
+  font-weight: bold !important;
+  border-radius: 15px !important;
+  color: #fff403 !important;
+  letter-spacing: 0.3em !important;
+  -webkit-text-stroke: 1px #191825 !important;
+  text-shadow: -2px 2px 5px  #fff403 !important;
+  background-color: transparent !important;
+  border: 2px solid  #fff403 !important;
+  box-shadow: 0 0 0px 1px  #fff403,
+    0 0 10px 2px  #fff403,
+    inset 0 0 0px 1px  #fff403,
+    inset 0 0 10px 2px  #fff403 !important;
+  transition: 100ms !important;
 }
 
 .swal2-cancel:hover {
-  transform: scale(1.1) !important;
-  box-shadow: 1px 1px 6px 6px rgb(255, 244, 3) !important;
-  text-shadow: 1px 1px 2px rgb(255, 244, 3) !important;
+  box-shadow: 0 0 0px 1px  #fff403,
+    0 0 10px 2px  #fff403,
+    inset 0 0 0px 1px  #fff403,
+    inset 0 0 30px 2px  #fff403 !important;
+  text-shadow: 0 0 10px  #fff403 !important;
+  transform: translateY(-5px) !important;
+}
+
+.swal2-cancel:active {
+  box-shadow: 0 0 0px 1px  #fff403,
+    0 0 25px 2px  #fff403,
+    inset 0 0 0px 1px  #fff403,
+    inset 0 0 30px 2px  #fff403 !important;
+  transform: translateY(1px) !important;
 }

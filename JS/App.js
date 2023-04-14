@@ -41,11 +41,18 @@ document.getElementById("btn-pedir-nombre").addEventListener("click", function (
             if (value.length > 10) {
                 return 'El nombre no debe tener más de 10 caracteres';
             }
+        },
+        didOpen: () => {
+            pauseTimer();
         }
     }).then((result) => {
         if (result.isConfirmed) {
             localStorage.setItem('nombre', result.value);
             mostrarNombre(result.value);
+        }else {
+            if (test > 0) {
+                restartTimer();
+            }
         }
     });
 });
@@ -67,6 +74,15 @@ btnhdp.addEventListener('click', () => {
         title: 'Como jugar',
         text: "El objetivo del Juego de 'Emparejado2' es que el jugador de la vuelta a pares de cartas iguales. En un turno, si el jugador elige dos cartas cuyos simbolos coincidan, se mostraran los simbolos emparejados. Sin embargo, si el jugador elige dos cartas con simbolos diferentes, ambas volveran a voltearse. El juego termina cuando se han descubierto todos los pares de cartas iguales.",
         confirmButtonText: '¡Entendido!',
+        didOpen: () => {
+            pauseTimer();
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if (test > 0) {
+                restartTimer();
+            }
+        }
     });
 });
 

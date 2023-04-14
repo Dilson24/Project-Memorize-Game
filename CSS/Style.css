@@ -279,17 +279,6 @@ body > footer {
   font-family: "Delight Coffee", sans-serif !important;
 }
 
-/* .swal2-confirm {
-  border-radius: 10px !important;
-  padding: 10px 40px 5px 40px !important;
-  margin: 20px !important;
-  line-height: 1 !important;
-  border: 5px solid #ff009e !important;
-  color: #ff009e !important;
-  background: none !important;
-  font-family: "Delight Coffee", sans-serif !important;
-  font-size: 25px !important;
-} */
 .swal2-confirm {
   font-family: "Delight Coffee", sans-serif !important;
   padding: 10px 40px 10px 40px !important;
