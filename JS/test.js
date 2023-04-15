@@ -154,6 +154,7 @@ let test = 0;
 
 function voltearCarta(event) {
     const card = event.target.closest('.card-' + currentLevel);
+    
     if (card.classList.contains("back-view")) {
         return;
     }
