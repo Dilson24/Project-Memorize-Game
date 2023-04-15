@@ -19,10 +19,8 @@ h6 {
   font-family: "Delight Coffee", sans-serif;
 }
 
-
-
 body {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   font-family: "Delight Coffee", sans-serif;
   background: rgba(25, 24, 37, 1);
@@ -31,14 +29,16 @@ body {
 
 /*Estilos para todos los contenedores*/
 
-.header, .buttons, .footer-content{
+.header,
+.buttons,
+.footer-content {
   flex: 0 0 auto;
 }
 
 body > footer {
   position: fixed;
   width: 100%;
-  bottom: 0; 
+  bottom: 0;
   margin-top: auto;
 }
 
@@ -49,34 +49,32 @@ body > footer {
 } */
 
 /*header*/
-.header, .head {
+.header,
+.head {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .header .img-logo {
- 
   max-width: 90%;
   height: auto;
-  
 }
 
 /*section buttons*/
 
-.buttons{
+.buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .container-button {
   margin-top: 2%;
-} 
-.btn-htp,.btn-play{
+}
+.btn-htp,
+.btn-play {
   margin: 10px;
 }
 .btn-play {
@@ -85,33 +83,27 @@ body > footer {
   font-size: 25px;
   font-weight: bold;
   border-radius: 15px;
-  color: #FF009E;
+  color: #ff009e;
   letter-spacing: 0.3em;
-  text-shadow: -2px 2px 5px #FF009E;
+  text-shadow: -2px 2px 5px #ff009e;
   -webkit-text-stroke: 1px #191825;
   background-color: transparent;
-  border: 2px solid #FF009E;
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 10px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 10px 2px #FF009E;
+  border: 2px solid #ff009e;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 10px 2px #ff009e;
   transition: 100ms;
 }
 
 .btn-play:hover {
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 10px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 30px 2px #FF009E;
-  text-shadow: 0 0 10px #FF009E;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
+  text-shadow: 0 0 10px #ff009e;
   transform: translateY(-5px);
 }
 
 .btn-play:active {
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 25px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 30px 2px #FF009E;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 25px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
   transform: translateY(1px);
 }
 
@@ -124,30 +116,24 @@ body > footer {
   color: #fff403;
   letter-spacing: 0.3em;
   -webkit-text-stroke: 1px #191825;
-  text-shadow: -2px 2px 5px  #fff403;
+  text-shadow: -2px 2px 5px #fff403;
   background-color: transparent;
-  border: 2px solid  #fff403;
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 10px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 10px 2px  #fff403;
+  border: 2px solid #fff403;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 10px 2px #fff403;
   transition: 100ms;
 }
 
 .btn-htp:hover {
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 10px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 30px 2px  #fff403;
-  text-shadow: 0 0 10px  #fff403;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
+  text-shadow: 0 0 10px #fff403;
   transform: translateY(-5px);
 }
 
 .btn-htp:active {
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 25px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 30px 2px  #fff403;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 25px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
   transform: translateY(1px);
 }
 
@@ -163,25 +149,23 @@ body > footer {
 }
 
 .social-media {
-  width: 47%; 
+  width: 47%;
   display: flex;
   justify-content: space-evenly;
   margin: 10px;
 }
 .social-media-icon {
-  
   /* Arriba | Derecha | Abajo | Izquierda */
   margin: 0 10px 0 10px;
   width: 60px;
   height: 60px;
   text-align: center;
-  color: #00FF53;
+  color: #00ff53;
   -webkit-text-stroke: 1px #191825;
-  text-shadow: -2px 2px 5px #00FF53;
+  text-shadow: -2px 2px 5px #00ff53;
 }
 
 .social-media-icon i {
-  
   font-size: 30px;
   line-height: 55px;
 }
@@ -242,19 +226,16 @@ body > footer {
 }
 
 .brad {
- 
   text-align: center;
-  
+
   text-shadow: -2px 2px 5px #8460af;
   letter-spacing: 0.1em;
   margin: 10px;
   color: #8460af;
-  
 }
-.brad span{
+.brad span {
   -webkit-text-stroke: 1px #191825;
 }
-
 
 /*styles sweetalert2*/
 
@@ -285,32 +266,26 @@ body > footer {
   font-size: 25px !important;
   font-weight: bold !important;
   border-radius: 15px !important;
-  color: #FF009E !important;
+  color: #ff009e !important;
   letter-spacing: 0.3em !important;
-  text-shadow: -2px 2px 5px #FF009E !important;
+  text-shadow: -2px 2px 5px #ff009e !important;
   -webkit-text-stroke: 1px #191825 !important;
   background-color: transparent !important;
-  border: 2px solid #FF009E !important;
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 10px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 10px 2px #FF009E !important;
+  border: 2px solid #ff009e !important;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 10px 2px #ff009e !important;
   transition: 100ms !important;
 }
 
 .swal2-confirm:hover {
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 10px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 30px 2px #FF009E !important;
-  text-shadow: 0 0 10px #FF009E !important;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e !important;
+  text-shadow: 0 0 10px #ff009e !important;
   transform: translateY(-5px) !important;
 }
 .swal2-confirm:active {
-  box-shadow: 0 0 0px 1px #FF009E,
-    0 0 25px 2px #FF009E,
-    inset 0 0 0px 1px #FF009E,
-    inset 0 0 30px 2px #FF009E !important;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 25px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e !important;
   transform: translateY(1px) !important;
 }
 .swal2-confirm:hover {
@@ -318,7 +293,6 @@ body > footer {
   box-shadow: 1px 1px 6px 6px rgb(255, 0, 158);
   text-shadow: 1px 1px 2px rgb(255, 0, 158);
 }
-
 
 .swal2-cancel {
   font-family: "Delight Coffee", sans-serif !important;
@@ -329,65 +303,47 @@ body > footer {
   color: #fff403 !important;
   letter-spacing: 0.3em !important;
   -webkit-text-stroke: 1px #191825 !important;
-  text-shadow: -2px 2px 5px  #fff403 !important;
+  text-shadow: -2px 2px 5px #fff403 !important;
   background-color: transparent !important;
-  border: 2px solid  #fff403 !important;
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 10px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 10px 2px  #fff403 !important;
+  border: 2px solid #fff403 !important;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 10px 2px #fff403 !important;
   transition: 100ms !important;
 }
 
 .swal2-cancel:hover {
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 10px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 30px 2px  #fff403 !important;
-  text-shadow: 0 0 10px  #fff403 !important;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403 !important;
+  text-shadow: 0 0 10px #fff403 !important;
   transform: translateY(-5px) !important;
 }
 
 .swal2-cancel:active {
-  box-shadow: 0 0 0px 1px  #fff403,
-    0 0 25px 2px  #fff403,
-    inset 0 0 0px 1px  #fff403,
-    inset 0 0 30px 2px  #fff403 !important;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 25px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403 !important;
   transform: translateY(1px) !important;
 }
 
-
-
 /*Responsive*/
 @media screen and (max-width: 1100px) {
- 
-
-
   .container-button {
-   
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: space-evenly;
     height: 40vh;
     margin: auto;
-    
   }
-
-
 }
 
 @media screen and (max-width: 1100px) {
- 
   .img-logo {
     height: 40vh !important;
   }
-
 }
 
 @media screen and (max-width: 589px) {
- 
-  .buttons{
+  .buttons {
     margin: 5%;
   }
 
@@ -395,37 +351,26 @@ body > footer {
     margin-top: 10%;
     width: 74%;
     height: 20vh;
-    
   }
 
-  .btn-htp,.btn-play{
+  .btn-htp,
+  .btn-play {
     margin-top: 5%;
     margin-bottom: 5%;
   }
 
-  .social-media{
-  
-   width: 100%;
-    
+  .social-media {
+    width: 100%;
   }
-  .social-media{
-  
+  .social-media {
     margin: 0 0 0 0;
-     
-   }
+  }
   /* .brad {
     
   } */
 }
 @media screen and (max-width: 360px) {
- 
-
-
   .container-button {
-   
     width: 90%;
-    
   }
-
-
 }
