@@ -43,21 +43,26 @@ body > .brad {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 100%;
   margin-bottom: auto;
 }
 .header .head {
-  justify-content: center;
-  width: 30%;
+  
+  margin: auto;
+  width: 100%;
 }
 .header .img-logo {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 30%;
   height: 6vh;
 }
 .header .score {
   display: flex;
   justify-content: space-between;
   width: 80%;
-
   text-align: center;
 }
 .score h3 {
@@ -207,7 +212,8 @@ body > .brad {
 
 .front-icon,
 .back-icon {
-  margin-top: auto;
+  display: flex;
+  justify-content: center;
   color: #fff403;
   -webkit-text-stroke: 3px black;
 }
@@ -568,4 +574,65 @@ select::-ms-expand {
   box-shadow: 0 0 0px 1px #fff403, 0 0 25px 2px #fff403,
     inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403 !important;
   transform: translateY(1px) !important;
+}
+
+/*Responsive*/
+@media screen and (max-width: 780px) {
+  .gear_icon{
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  top: 1px;
+}
+
+.container-menu{
+  width: 40%;
+
+}
+  
+
+
+}
+
+@media screen and (max-width: 480px) {
+  .brad{
+    font-size: 11px;
+  }
+ 
+  .score {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+
+  .score > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .time h3{
+    margin-right: auto;
+    
+  }
+
+
+
+
+
+
+}
+@media screen and (max-width: 320px) {
+
+
+
+  .container-menu{
+    width: 60%;
+  
+  }
+
+
+
+
 }
