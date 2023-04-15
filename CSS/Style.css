@@ -157,72 +157,54 @@ body > footer {
 .social-media-icon {
   /* Arriba | Derecha | Abajo | Izquierda */
   margin: 0 10px 0 10px;
-  width: 60px;
-  height: 60px;
   text-align: center;
   color: #00ff53;
-  -webkit-text-stroke: 1px #191825;
+  -webkit-text-stroke: 2px #191825;
   text-shadow: -2px 2px 5px #00ff53;
+  font-size: 35px;
+  transition: 100ms;
 }
 
-.social-media-icon i {
-  font-size: 30px;
-  line-height: 55px;
+.fa-facebook-f:hover,.fa-github:hover {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #ff009e;
+  text-shadow: -2px 2px 5px #ff009e;
+  -webkit-text-stroke: 1px #191825;
+  background-color: transparent;
+  border: 2px solid #ff009e;
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 10px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
+  transform: translateY(-5px);
+  line-height: 1.4em;
+}
+.fa-facebook-f:active,.fa-github:active {
+  box-shadow: 0 0 0px 1px #ff009e, 0 0 25px 2px #ff009e,
+    inset 0 0 0px 1px #ff009e, inset 0 0 30px 2px #ff009e;
+  transform: translateY(1px);
 }
 
-.social-media-icon .fa-facebook-f:hover {
-  color: #fff;
-  background: rgb(14, 140, 233);
-  box-shadow: 1px 2px 2px 5px rgb(14, 140, 233);
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
-  transform: scale(1.1);
+.fa-linkedin-in:hover, .fa-instagram:hover {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  font-size: 35px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -webkit-text-stroke: 0;
+  color: #fff403;
+  text-shadow: -2px 2px 5px #fff403;
+  -webkit-text-stroke: 1px #191825;
+  background-color: transparent;
+  border: 2px solid #fff403;
+  box-shadow: 0 0 0px 1px #fff403, 0 0 10px 2px #fff403,
+    inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
+  transform: translateY(-5px);
+  line-height: 1.4em;
 }
-
-.social-media-icon .fa-instagram:hover {
-  color: #fff;
-  background: rgba(221, 41, 111, 1);
-  border-radius: 50%;
-  box-shadow: 1px 2px 2px 5px rgba(221, 41, 111, 1);
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
-  font-size: 35px;
-  transform: scale(1.1);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -webkit-text-stroke: 0;
-}
-
-.social-media-icon .fa-github:hover {
-  color: #fff;
-  background: #000000;
-  border-radius: 50%;
-  box-shadow: 1px 2px 2px 5px rgb(0, 0, 0);
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  font-size: 35px;
-  transform: scale(1.1);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -webkit-text-stroke: 0;
-}
-.social-media-icon .fa-linkedin-in:hover {
-  color: #fff;
-  background: #0074b0;
-  transform: scale(1.1);
-  border-radius: 50%;
-  box-shadow: 1px 2px 2px 5px rgb(0, 116, 176);
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
-  font-size: 35px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -webkit-text-stroke: 0;
+.fa-linkedin-in:active, .fa-instagram:active{
+  box-shadow: 0 0 0px 1px #fff403, 0 0 25px 2px #fff403,
+  inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
+  transform: translateY(1px);
 }
 
 .brad {
