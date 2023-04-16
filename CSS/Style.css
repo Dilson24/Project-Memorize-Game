@@ -199,9 +199,6 @@ body > footer {
   inset 0 0 0px 1px #fff403, inset 0 0 30px 2px #fff403;
   transform: translateY(1px);
 }
-.social-media-icon .icon:not(:hover) {
-  transform: none;
-}
 
 .brad {
   text-align: center;
