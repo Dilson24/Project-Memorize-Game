@@ -1,22 +1,38 @@
-//DROP-DOWN MENU FUNCTION
-const gear_icon = document.querySelector('.gear_icon')
-const setup_menu = document.querySelector('.container-menu')
-
+const gear_icon = document.querySelector('.gear_icon');
+const setup_menu = document.querySelector('.container-menu');
+const header = document.querySelector('.header');
+const container_game = document.querySelector('.container.game');
+const contact_us = document.querySelector('.contact-us');
 
 gear_icon.addEventListener('click', () => {
-    setup_menu.classList.toggle("spread")
-    pauseTimer()
-})
-
-window.addEventListener('click', e => {
-    if (setup_menu.classList.contains('spread') && e.target != setup_menu && e.target != gear_icon) {
-        setup_menu.classList.toggle("spread")
-        console.log('cerrar')
+    setup_menu.classList.toggle('spread');
+    if (setup_menu.classList.contains('spread')) {
+        header.style.opacity = '0.7';
+        container_game.style.opacity = '0.7';
+        contact_us.style.opacity = '0.7';
+        pauseTimer();
+    } else {
+        header.style.opacity = '1';
+        container_game.style.opacity = '1';
+        contact_us.style.opacity = '1';
         if (test > 0) {
             restartTimer();
         }
     }
-})
+});
+
+window.addEventListener('click', e => {
+    if (setup_menu.classList.contains('spread') && e.target != setup_menu && e.target != gear_icon) {
+        setup_menu.classList.remove('spread');
+        header.style.opacity = '1';
+        container_game.style.opacity = '1';
+        contact_us.style.opacity = '1';
+        if (test > 0) {
+            restartTimer();
+        }
+    }
+});
+
 
 // variables globales
 let currentLevel;
@@ -177,7 +193,6 @@ function voltearCarta(event) {
                 }
             }, 8000);
         } else {
-
             clearTimeout(cardTimeout);
         }
         if (flippedCards.length === 2) {
@@ -185,7 +200,6 @@ function voltearCarta(event) {
             const icon1 = flippedCards[0].querySelector('.back-icon i').getAttribute('data-icon');
             const icon2 = flippedCards[1].querySelector('.back-icon i').getAttribute('data-icon');
             if (icon1 === icon2) {
-
                 matchedCards++;
                 flippedCards[0].classList.add("matched");
                 flippedCards[1].classList.add("matched");
@@ -216,18 +230,14 @@ function voltearCarta(event) {
                             }
                         });
                     });
-
                     document.removeEventListener("visibilitychange", handleVisibilityChange);
                     test = 0;
                 }
             } else {
                 setTimeout(() => {
-
-
                     flippedCards[0].classList.toggle("back-view");
                     flippedCards[1].classList.toggle("back-view");
                     flippedCards = [];
-
 
                 }, 1000);
 

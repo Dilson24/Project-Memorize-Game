@@ -43,6 +43,8 @@ body {
 body > .brad {
   position: fixed;
 }
+
+
 .header,
 .game,
 .footer-content {
@@ -134,14 +136,38 @@ body > .brad {
 }
 .front-view {
   transform: rotateY(0deg);
+  transition: transform 0.5s ease-out;
+  transform-origin: center;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 .back-view {
   transform: rotateY(180deg);
+  transform-origin: center;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-name: flip;
+  animation-duration: 0.5s;
   border-radius: 15px;
   box-shadow: 0 0 0px 1px var(--yellow), 0 0 10px 1px var(--yellow),
     inset 0 0 0px 1px var(--yellow), inset 0 0 35px 1px var(--yellow) !important;
   pointer-events: none;
 }
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg) ;
+  }
+  50% {
+    transform: rotateY(100deg) ;
+  }
+  100% {
+    transform: rotateY(180deg) ;
+  }
+}
+
+
+
+
 .front-icon,
 .back-icon {
   display: flex;
@@ -163,8 +189,9 @@ body > .brad {
   box-shadow: 0 0 0px 1px var(--pink), 0 0 10px 2px var(--pink),
     inset 0 0 0px 1px var(--pink), inset 0 0 40px 2px var(--pink);
   transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
 }
 .easy {
   font-size: 4.5em;
@@ -226,8 +253,6 @@ body > .brad {
   text-shadow: 0 0 15px var(--pink) !important;
 }
 
-/*///////////////////////////////////////////*/
-
 /*FOOTER*/
 .footer-content {
   display: flex;
@@ -241,10 +266,13 @@ body > .brad {
   color: var(--logo_color2);
 }
 .brad span {
+  text-shadow: -2px -2px 5px var(--logo_color2), 2px -2px 5px var(--logo_color2),
+    -2px 2px 5px var(--logo_color2), 2px 2px 5px var(--logo_color2);
   -webkit-text-stroke: 1px var(--background_color);
 }
 
 /*-styles Menu-*/
+
 .gear_icon {
   position: fixed;
   width: 40px;
@@ -285,11 +313,11 @@ body > .brad {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  border-left: 2px solid var(--green);
-  box-shadow: -6px 0px 50px 0px var(--green);
   transform: translateX(110%);
   transition: transform 0.3s ease-in-out;
+  z-index: 9999;
 }
+
 .head-footer {
   display: none;
   margin: auto;
@@ -304,6 +332,7 @@ body > .brad {
   height: 10vh;
 }
 .spread {
+
   transform: translate(0);
 }
 .setup_menu {

@@ -221,6 +221,8 @@ body > footer {
   color: var(--logo_color2);
 }
 .brad span {
+  text-shadow: -2px -2px 5px var(--logo_color2), 2px -2px 5px var(--logo_color2),
+  -2px 2px 5px var(--logo_color2), 2px 2px 5px var(--logo_color2);
   -webkit-text-stroke: 1px var(--background_color);
 }
 /*-styles sweetalert2-*/
