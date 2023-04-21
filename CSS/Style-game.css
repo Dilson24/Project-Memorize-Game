@@ -237,7 +237,7 @@ body > .brad {
 .card-easy:hover,
 .card-medium:hover,
 .card-hard:hover {
-  transition: all 0.9s ease;
+  transition: all 0.5s ease;
   box-shadow: 0 0 0px 1px var(--pink), 0 0 10px 2px var(--pink),
     inset 0 0 0px 1px var(--pink), inset 0 0 100px 2px var(--pink);
   text-shadow: 0 0 30px var(--pink);

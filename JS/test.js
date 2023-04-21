@@ -33,6 +33,16 @@ window.addEventListener('click', e => {
     }
 });
 
+// Llamar la atención del usuario
+let previousTitle = document.title
+
+window.addEventListener('blur', () => {
+    previousTitle = document.title
+    document.title = '¡No te vayas! ¡Sigue jugando! 🧩'
+})
+window.addEventListener('focus', () => {
+    document.title = previousTitle
+})
 
 // variables globales
 let currentLevel;
@@ -170,7 +180,7 @@ let test = 0;
 
 function voltearCarta(event) {
     const card = event.target.closest('.card-' + currentLevel);
-    
+
     if (card.classList.contains("back-view")) {
         return;
     }
@@ -211,11 +221,17 @@ function voltearCarta(event) {
                     setTimeout(() => {
                         Swal.fire({
                             title: '¡Felicitaciones, has ganado!',
-                            text: `¡Has encontrado todas las parejas en un tiempo de ${minutes}:${seconds}, usaste ${moves} movimientos!`,
+                            text: `¡Has encontrado todas las parejas en un tiempo de ${minutes} minutos con ${seconds} segundos, usaste ${moves} movimientos!`,
                             showCancelButton: true,
                             confirmButtonText: 'Reiniciar',
                             cancelButtonText: 'Cambiar dificultad',
-
+                            imageUrl: '/Img/success.gif',
+                            imageWidth: 400,
+                            imageHeight: 150,
+                            imageAlt: 'GIF de felicitaciones',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false,
+                            allowEnterKey: false,
                             showClass: {
                                 popup: 'animate__animated animate__fadeInDown'
                             },
