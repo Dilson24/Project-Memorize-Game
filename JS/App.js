@@ -1,5 +1,5 @@
 //variables globales
-const spanNombre = document.getElementById('nombre');
+const spanNombre = document.querySelector('.player-name');
 const nombre = localStorage.getItem('nombre');
 const playerBtn = document.querySelector('.four');
 const hdpBtn = document.querySelector('.two');

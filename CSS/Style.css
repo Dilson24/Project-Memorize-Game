@@ -239,7 +239,7 @@ body > footer {
   text-shadow: -2px 2px 5px var(--logo_color2) !important;
   -webkit-text-stroke: 1px var(--background_color) !important;
 }
-.swal2-icon.swal2-info{
+.swal2-info{
   text-shadow: -2px -2px 5px #9de0f6, 2px -2px 5px #9de0f6,
   -2px 2px 5px #9de0f6, 2px 2px 5px #9de0f6 !important;
   box-shadow: 0 0 0px 1px #9de0f6, 0 0 25px 2px #9de0f6,
@@ -280,11 +280,6 @@ body > footer {
   box-shadow: 0 0 0px 1px var(--pink), 0 0 25px 2px var(--pink),
     inset 0 0 0px 1px var(--pink), inset 0 0 30px 2px var(--pink) !important;
   transform: translateY(1px) !important;
-}
-.swal2-confirm:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 1px 6px 6px var(--pink) !important;
-  text-shadow: 1px 1px 2px var(--pink) !important;
 }
 .swal2-cancel {
   font-family: "Delight Coffee", sans-serif !important;

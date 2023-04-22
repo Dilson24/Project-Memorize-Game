@@ -530,11 +530,6 @@ body > .brad {
     inset 0 0 0px 1px var(--pink), inset 0 0 30px 2px var(--pink) !important;
   transform: translateY(1px) !important;
 }
-.swal2-confirm:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 1px 6px 6px var(--pink) !important;
-  text-shadow: 1px 1px 2px var(--pink) !important;
-}
 .swal2-cancel {
   font-family: "Delight Coffee", sans-serif !important;
   padding: 10px 40px 10px 40px !important;
@@ -551,14 +546,12 @@ body > .brad {
     inset 0 0 0px 1px var(--yellow), inset 0 0 10px 2px var(--yellow) !important;
   transition: 100ms !important;
 }
-
 .swal2-cancel:hover {
   box-shadow: 0 0 0px 1px var(--yellow), 0 0 10px 2px var(--yellow),
     inset 0 0 0px 1px var(--yellow), inset 0 0 30px 2px var(--yellow) !important;
   text-shadow: 0 0 10px var(--yellow) !important;
   transform: translateY(-5px) !important;
 }
-
 .swal2-cancel:active {
   box-shadow: 0 0 0px 1px var(--yellow), 0 0 25px 2px var(--yellow),
     inset 0 0 0px 1px var(--yellow), inset 0 0 30px 2px var(--yellow) !important;
