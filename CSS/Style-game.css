@@ -317,7 +317,6 @@ body > .brad {
   transition: transform 0.3s ease-in-out;
   z-index: 9999;
 }
-
 .head-footer {
   display: none;
   margin: auto;
@@ -332,7 +331,6 @@ body > .brad {
   height: 10vh;
 }
 .spread {
-
   transform: translate(0);
 }
 .setup_menu {
@@ -477,23 +475,26 @@ body > .brad {
 }
 
 /*-styles sweetalert2-*/
-
 .swal2-popup {
   background: var(--background_color) !important;
 }
-
 .swal2-title {
   color: var(--logo_color1) !important;
   text-shadow: -2px 2px 5px var(--logo_color1) !important;
   -webkit-text-stroke: 1px var(--background_color) !important;
 }
-
 .swal2-html-container {
   color: var(--logo_color2) !important;
   text-shadow: -2px 2px 5px var(--logo_color2) !important;
   -webkit-text-stroke: 1px var(--background_color) !important;
 }
-
+.swal2-icon.swal2-info{
+  text-shadow: -2px -2px 5px #9de0f6, 2px -2px 5px #9de0f6,
+  -2px 2px 5px #9de0f6, 2px 2px 5px #9de0f6 !important;
+  box-shadow: 0 0 0px 1px #9de0f6, 0 0 25px 2px #9de0f6,
+  inset 0 0 0px 1px #9de0f6, inset 0 0 30px 2px #9de0f6 !important;
+  -webkit-text-stroke: 2px var(--background_color) !important;
+}
 .swal2-input {
   outline: 0 !important;
   border: 0 !important;
@@ -518,7 +519,6 @@ body > .brad {
     inset 0 0 0px 1px var(--pink), inset 0 0 10px 2px var(--pink) !important;
   transition: 100ms !important;
 }
-
 .swal2-confirm:hover {
   box-shadow: 0 0 0px 1px var(--pink), 0 0 10px 2px var(--pink),
     inset 0 0 0px 1px var(--pink), inset 0 0 30px 2px var(--pink) !important;
@@ -532,10 +532,9 @@ body > .brad {
 }
 .swal2-confirm:hover {
   transform: scale(1.1);
-  box-shadow: 1px 1px 6px 6px var(--pink);
-  text-shadow: 1px 1px 2px var(--pink);
+  box-shadow: 1px 1px 6px 6px var(--pink) !important;
+  text-shadow: 1px 1px 2px var(--pink) !important;
 }
-
 .swal2-cancel {
   font-family: "Delight Coffee", sans-serif !important;
   padding: 10px 40px 10px 40px !important;
