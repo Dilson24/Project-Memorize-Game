@@ -1,4 +1,4 @@
-//SweetAlert's
+//SWEETALERT'S
 const playerBtn = document.querySelector('.btn-play');
 const hdpBtn = document.querySelector('.btn-htp');
 
