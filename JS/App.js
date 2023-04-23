@@ -11,8 +11,8 @@ const contact_us = document.querySelector('.contact-us');
 const startBtn = document.querySelector('.three');
 const levels = {
     hard: ["fa-home", "fa-user", "fa-heart", "fa-search", "fa-envelope", "fa-phone", "fa-shopping-cart", "fa-lock", "fa-cog", "fa-graduation-cap", "fa-camera", "fa-music", "fa-map-marker", "fa-wrench", "fa-plane", "fa-globe", "fa-chess-pawn", "fa-chess-knight"],
-    medium: ['fa-anchor', 'fa-balance-scale', 'fa-bell', 'fa-bug', 'fa-calendar', 'fa-certificate', 'fa-chess-knight', 'fa-cloud', 'fa-diamond', 'fa-fighter-jet', 'fa-fire-extinguisher', 'fa-graduation-cap',],
-    easy: ['fa-ambulance', 'fa-bicycle', 'fa-binoculars', 'fa-bomb', 'fa-book', 'fa-briefcase', 'fa-camera', 'fa-coffee',]
+    medium: ['fa-solid fa-music','fa-solid fa-bomb','fa-solid fa-face-smile-beam','fa-solid fa-ghost','fa-solid fa-fire','fa-solid fa-bicycle','fa-solid fa-circle-radiation','fa-solid fa-cat','fa-solid fa-user-graduate','fa-solid fa-dog','fa-solid fa-crown','fa-solid fa-sack-dollar'],
+    easy: ['fa-brands fa-twitter', 'fa-brands fa-tiktok', 'fa-brands fa-discord', 'fa-brands fa-youtube', 'fa-brands fa-spotify', 'fa-brands fa-whatsapp', 'fa-brands fa-pinterest', 'fa-solid fa-user-secret']
 }
 const cardsContainer = document.querySelector('.cards');
 const restartBtn = document.querySelector('.five');
@@ -203,7 +203,7 @@ function createCardDiv(currentLevel) {
                     <span class="front-icon ${currentLevel}"><i class="fa-solid fa-question"></i></span>
                 </div>
                 <div class="view back-view" >
-                    <span class="back-icon ${currentLevel}"><i class="fa-solid ${card}" data-icon="${card}"></i></span>
+                    <span class="back-icon ${currentLevel}"><i class="${card}" data-icon="${card}"></i></span>
                 </div>
             </div>
         `;
