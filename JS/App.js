@@ -10,7 +10,7 @@ const containerGame = document.querySelector('.container.game');
 const contact_us = document.querySelector('.contact-us');
 const startBtn = document.querySelector('.three');
 const levels = {
-    hard: ["fa-home", "fa-user", "fa-heart", "fa-search", "fa-envelope", "fa-phone", "fa-shopping-cart", "fa-lock", "fa-cog", "fa-graduation-cap", "fa-camera", "fa-music", "fa-map-marker", "fa-wrench", "fa-plane", "fa-globe", "fa-chess-pawn", "fa-chess-knight"],
+    hard: ['fa-solid fa-wand-magic-sparkles', 'fa-solid fa-shield-heart','fa-brands fa-windows','fa-solid fa-code','fa-brands fa-html5','fa-solid fa-brain','fa-brands fa-ubuntu','fa-solid fa-puzzle-piece','fa-solid fa-cloud','fa-brands fa-js','fa-brands fa-css3-alt','fa-solid fa-skull','fa-solid fa-masks-theater','fa-solid fa-hand-peace','fa-solid fa-chess-king','fa-solid fa-robot','fa-solid fa-lightbulb','fa-solid fa-star'],
     medium: ['fa-solid fa-music','fa-solid fa-bomb','fa-solid fa-face-smile-beam','fa-solid fa-ghost','fa-solid fa-fire','fa-solid fa-bicycle','fa-solid fa-circle-radiation','fa-solid fa-cat','fa-solid fa-user-graduate','fa-solid fa-dog','fa-solid fa-crown','fa-solid fa-sack-dollar'],
     easy: ['fa-brands fa-twitter', 'fa-brands fa-tiktok', 'fa-brands fa-discord', 'fa-brands fa-youtube', 'fa-brands fa-spotify', 'fa-brands fa-whatsapp', 'fa-brands fa-pinterest', 'fa-solid fa-user-secret']
 }
