@@ -19,7 +19,7 @@
 /*CUSTOM FONTS*/
 @font-face {
   font-family: "Delight Coffee", sans-serif;
-  src: url("../Fonts/delight-coffee/Delight Coffee.ttf");
+  src: url("../Fonts/delight-coffee/Delight Coffee.ttf") format("truetype");
 }
 
 h1,
@@ -604,7 +604,7 @@ select::-ms-expand {
     width: 95%;
   }
   /*-drop-down menu responsive-*/
-  .gear_icon {
+  .gear-icon {
     width: 30px;
     height: 30px;
     bottom: 0;
