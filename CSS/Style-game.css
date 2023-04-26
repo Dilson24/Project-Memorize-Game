@@ -17,10 +17,10 @@
 }
 
 /*CUSTOM FONTS*/
-@font-face {
-  font-family: "Delight Coffee", sans-serif;
+/* @font-face {
+  font-family: 'Chewy', cursive;
   src: url("../Fonts/delight-coffee/Delight-Coffee.ttf") format("truetype");
-}
+} */
 
 h1,
 h2,
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Delight Coffee", sans-serif;
+  font-family: "Chewy", cursive;
 }
 
 /*STYLES FOR ALL CONTAINERS*/
@@ -38,7 +38,7 @@ body {
   flex-direction: column;
   height: 100vh;
   background: var(--background_color);
-  font-family: "Delight Coffee", sans-serif;
+  font-family: "Chewy", cursive;
 }
 body > .brad {
   position: fixed;
@@ -75,7 +75,7 @@ body > .brad {
   width: 80%;
   text-align: center;
 }
-.score h3 {
+.score h2 {
   display: block;
   color: var(--logo_color2);
   text-shadow: -2px -2px 5px var(--logo_color2), 2px -2px 5px var(--logo_color2),
@@ -85,6 +85,7 @@ body > .brad {
 }
 .score span {
   color: var(--green);
+  font-size: 18px;
   text-shadow: -2px -2px 5px var(--green), 2px -2px 5px var(--green),
     -2px 2px 5px var(--green), 2px 2px 5px var(--green);
   letter-spacing: 0.1em;
@@ -337,7 +338,7 @@ body > .brad {
   color: var(--logo_color2);
   text-decoration: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-shadow: -2px -2px 5px var(--logo_color2), 2px -2px 5px var(--logo_color2),
@@ -492,7 +493,7 @@ body > .brad {
   outline: 0 !important;
   border: 0 !important;
   box-shadow: none !important;
-  font-family: "Delight Coffee", sans-serif !important;
+  font-family: "Chewy", cursive !important;
 }
 .swal2-confirm {
   padding: 10px 40px 10px 40px !important;
@@ -502,8 +503,8 @@ body > .brad {
   border: 2px solid var(--pink) !important;
   box-shadow: 0 0 0px 1px var(--pink), 0 0 10px 2px var(--pink),
     inset 0 0 0px 1px var(--pink), inset 0 0 10px 2px var(--pink) !important;
-  font-family: "Delight Coffee", sans-serif !important;
-  font-size: 25px !important;
+  font-family: "Chewy", cursive !important;
+  font-size: 30px !important;
   font-weight: bold !important;
   letter-spacing: 0.3em !important;
   text-shadow: -2px 2px 5px var(--pink) !important;
@@ -529,8 +530,8 @@ body > .brad {
   border: 2px solid var(--yellow) !important;
   box-shadow: 0 0 0px 1px var(--yellow), 0 0 10px 2px var(--yellow),
     inset 0 0 0px 1px var(--yellow), inset 0 0 10px 2px var(--yellow) !important;
-  font-family: "Delight Coffee", sans-serif !important;
-  font-size: 25px !important;
+  font-family: "Chewy", cursive !important;
+  font-size: 30px !important;
   font-weight: bold !important;
   letter-spacing: 0.3em !important;
   -webkit-text-stroke: 1px var(--background_color) !important;
@@ -559,8 +560,9 @@ select {
   outline: 0;
   border: 0;
   box-shadow: none;
-  font-family: "Delight Coffee", sans-serif;
-  font-size: 18px;
+  font-family: "Chewy", cursive;
+  font-size: 25px;
+  letter-spacing: 0.1em;
   cursor: pointer;
 }
 /*-remove IE arrow-*/
@@ -592,6 +594,9 @@ select::-ms-expand {
 /*-transition-*/
 .select:hover::after {
   color: var(--logo_color2);
+}
+.select option {
+  font-size: 22.5px;
 }
 .select option:checked {
   color: var(--logo_color1);
@@ -681,10 +686,16 @@ select::-ms-expand {
   }
   .swal2-confirm {
     padding: 10px !important;
-    font-size: 20px !important;
   }
   .swal2-cancel {
     padding: 10px !important;
+  }
+}
+@media screen and (max-width: 295px) {
+  .swal2-confirm {
+    font-size: 20px !important;
+  }
+  .swal2-cancel {
     font-size: 20px !important;
   }
 }
