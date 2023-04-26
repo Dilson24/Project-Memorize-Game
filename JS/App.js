@@ -255,7 +255,7 @@ function flipCard(event) {
                             showCancelButton: true,
                             confirmButtonText: 'Reiniciar',
                             cancelButtonText: 'Cambiar dificultad',
-                            imageUrl: '/Img/success.gif',
+                            imageUrl: '../Img/success.gif',
                             imageWidth: 400,
                             imageHeight: 150,
                             imageAlt: 'GIF de felicitaciones',
