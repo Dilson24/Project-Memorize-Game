@@ -83,7 +83,7 @@ body > footer {
   font-family: "Chewy", cursive;
   font-size: 30px;
   letter-spacing: 0.3em;
-  -webkit-text-stroke: 1px var(--background_color);
+  -webkit-text-stroke: 1.7px var(--background_color);
   text-shadow: -2px -2px 5px var(--pink), 2px -2px 5px var(--pink),
     -2px 2px 5px var(--pink), 2px 2px 5px var(--pink);
   transition: 100ms;
@@ -110,7 +110,7 @@ body > footer {
   font-family: "Chewy", cursive;
   font-size: 30px;
   letter-spacing: 0.3em;
-  -webkit-text-stroke: 1px var(--background_color);
+  -webkit-text-stroke: 1.7px var(--background_color);
   text-shadow: -2px -2px 5px var(--yellow), 2px -2px 5px var(--yellow),
     -2px 2px 5px var(--yellow), 2px 2px 5px var(--yellow);
   transition: 100ms;
