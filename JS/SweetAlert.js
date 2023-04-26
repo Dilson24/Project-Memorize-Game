@@ -1,6 +1,7 @@
 //SWEETALERT'S
 const playerBtn = document.querySelector('.btn-play');
 const hdpBtn = document.querySelector('.btn-htp');
+let previousTitle = document.title;
 
 playerBtn.addEventListener('click', () => {
         Swal.fire({
@@ -42,3 +43,11 @@ hdpBtn.addEventListener('click', () => {
         allowEnterKey: false,
     });
 });
+//DYNAMIC PAGE TITLE
+window.addEventListener('blur', () => {
+    previousTitle = document.title;
+    document.title = '¡No te vayas! ¡Sigue jugando! 🧩'
+})
+window.addEventListener('focus', () => {
+    document.title = previousTitle;
+})

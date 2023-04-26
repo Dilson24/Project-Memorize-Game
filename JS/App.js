@@ -121,11 +121,11 @@ window.addEventListener('click', e => {
 
 //DYNAMIC PAGE TITLE
 window.addEventListener('blur', () => {
-    previousTitle = document.title
-    document.title = '¡No te vayas! ¡Sigue jugando! 🧩'
+    previousTitle = document.title;
+    document.title = '¡No te vayas! ¡Sigue jugando! 🧩';
 })
 window.addEventListener('focus', () => {
-    document.title = previousTitle
+    document.title = previousTitle;
 })
 
 //FUNCTION TO SELECT LEVEL
