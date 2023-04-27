@@ -141,6 +141,7 @@ body > footer {
   display: flex;
   justify-content: space-between;
   width: 50%;
+  transform: translateZ(0)
 }
 .social-media a {
   color: var(--green);
