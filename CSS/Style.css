@@ -40,7 +40,7 @@ body {
 }
 
 body > footer {
-  position: fixed;
+  position: absolute;
   width: 100%;
   bottom: 0;
   margin-top: auto;
@@ -207,6 +207,10 @@ body > footer {
     inset 0 0 0px 1px var(--yellow), inset 0 0 30px 2px var(--yellow);
   transform: translateY(1px);
 }
+.contact-us {
+  position: relative;
+}
+
 .brad {
   margin: 10px;
   color: var(--logo_color2);
