@@ -42,7 +42,7 @@ body {
 body > footer {
   position: fixed;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   margin-top: auto;
   transform: translate3d(0, 0, 0);
 }
@@ -66,8 +66,7 @@ body > footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2%;
-}
+  }
 .container-button {
   margin-top: 2%;
 }
@@ -137,14 +136,12 @@ body > footer {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  margin-top: auto;
+  
 }
 .social-media {
   display: flex;
   justify-content: space-between;
   width: 50%;
-  position: relative;
-  transform: translateZ(0)
 }
 .social-media a {
   color: var(--green);
@@ -213,13 +210,8 @@ body > footer {
     inset 0 0 0px 1px var(--yellow), inset 0 0 30px 2px var(--yellow);
   transform: translateY(1px);
 }
-.contact-us {
-  position: relative;
-  transform: translateZ(0)
-}
-
 .brad {
-  margin: 10px;
+  margin: auto;
   color: var(--logo_color2);
   text-align: center;
   letter-spacing: 0.1em;
