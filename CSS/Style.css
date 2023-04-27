@@ -40,10 +40,11 @@ body {
 }
 
 body > footer {
-  position: fixed;
+  position: sticky;
   width: 100%;
   bottom: 0px;
   margin-top: auto;
+  z-index: 999;
 }
 
 
