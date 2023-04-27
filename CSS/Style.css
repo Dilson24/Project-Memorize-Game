@@ -66,10 +66,10 @@ body > footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 .container-button {
   margin-top: 2%;
-  margin-bottom: 2%;
 }
 .btn-htp,
 .btn-play {
