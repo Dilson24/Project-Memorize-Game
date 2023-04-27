@@ -135,13 +135,13 @@ body > footer {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  position: relative;
-  transform: translateZ(0)
 }
 .social-media {
   display: flex;
   justify-content: space-between;
   width: 50%;
+  position: relative;
+  transform: translateZ(0)
 }
 .social-media a {
   color: var(--green);
@@ -212,6 +212,7 @@ body > footer {
 }
 .contact-us {
   position: relative;
+  transform: translateZ(0)
 }
 
 .brad {
