@@ -14,11 +14,11 @@
 
 ## Overview
 
-*'Projec Memorize Game' *was created for the Front-End challenge of the *'Full Stack Development - Intermediate'* course of the [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). The objective of the challenge is to demonstrate mastery of the main Front-End technologies (HTML, CSS and JavaScript).
+*'Projec Memorize Game'* was created for the Front-End challenge of the *'Full Stack Development - Intermediate'* course of the [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). The objective of the challenge is to demonstrate mastery of the main Front-End technologies (HTML, CSS and JavaScript).
 
 You can play the game here --> [Projec Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
 ## Resumen
-*'Projec Memorize Game'*fue creado para el reto Front-End del curso *Desarrollo Full Stack - Intermedio'* de la [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). El objetivo del reto es demostrar el dominio de las principales tecnologías Front-End (HTML, CSS y JavaScript).
+*'Projec Memorize Game'* fue creado para el reto Front-End del curso *Desarrollo Full Stack - Intermedio'* de la [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). El objetivo del reto es demostrar el dominio de las principales tecnologías Front-End (HTML, CSS y JavaScript).
 
 Puedes jugar aquí --> [Projec Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
 
