@@ -118,7 +118,7 @@ para ofrecer al jugador funciones que mejoren la experiencia general.
 - [@Dilson24](https://www.github.com/Dilson24) - Coding and documentation.
 ## License
 **Free Software, Hell Yeah!**
-[MIT](https://choosealicense.com/licenses/mit/) © 2021 - Dilson Alexander Cruz Nivia
+[MIT](https://choosealicense.com/licenses/mit/) © 2023 - Dilson Alexander Cruz Nivia
 
  [JavaScript]: <https://lenguajejs.com/>
  [HTML5]: <https://lenguajehtml.com/html/>
