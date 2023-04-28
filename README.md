@@ -1,4 +1,4 @@
-#Projec Memorize Game
+# Projec Memorize Game
 ![View Zero](Img/logo.png "View Zero")
 ![Bower](https://img.shields.io/bower/l/MI)
 
@@ -119,6 +119,7 @@ para ofrecer al jugador funciones que mejoren la experiencia general.
 ## License
 **Free Software, Hell Yeah!**
 [MIT](https://choosealicense.com/licenses/mit/) © 2021 - Dilson Alexander Cruz Nivia
+
  [JavaScript]: <https://lenguajejs.com/>
  [HTML5]: <https://lenguajehtml.com/html/>
  [CSS]: <https://lenguajecss.com/css/>
