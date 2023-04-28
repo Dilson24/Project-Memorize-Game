@@ -1,4 +1,4 @@
-# Projec Memorize Game
+# Project Memorize Game
 ![View Zero](Img/logo.png "View Zero")
 ![Bower](https://img.shields.io/bower/l/MI)
 
@@ -14,13 +14,13 @@
 
 ## Overview
 
-*'Projec Memorize Game'* was created for the Front-End challenge of the *'Full Stack Development - Intermediate'* course of the [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). The objective of the challenge is to demonstrate mastery of the main Front-End technologies (HTML, CSS and JavaScript).
+*'Project Memorize Game'* was created for the Front-End challenge of the *'Full Stack Development - Intermediate'* course of the [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). The objective of the challenge is to demonstrate mastery of the main Front-End technologies (HTML, CSS and JavaScript).
 
-You can play the game here --> [Projec Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
+You can play the game here --> [Project Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
 ## Resumen
-*'Projec Memorize Game'* fue creado para el reto Front-End del curso *Desarrollo Full Stack - Intermedio'* de la [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). El objetivo del reto es demostrar el dominio de las principales tecnologías Front-End (HTML, CSS y JavaScript).
+*'Project Memorize Game'* fue creado para el reto Front-End del curso *Desarrollo Full Stack - Intermedio'* de la [Universidad Distrital Francisco José de Caldas](https://www.udistrital.edu.co/). El objetivo del reto es demostrar el dominio de las principales tecnologías Front-End (HTML, CSS y JavaScript).
 
-Puedes jugar aquí --> [Projec Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
+Puedes jugar aquí --> [Project Memorize Game](https://dilson24.github.io/Project-Memorize-Game/)
 
 ## How to play 
 This game is a browser-based card game that presents the player with cards arranged in a grid, where the easy level has a 4x4 grid containing 8 matching symbols, the medium level has a 6x4 grid containing 12 matching symbols and the hard level has a 6x6 grid containing 18 matching symbols. The objective of the *'Emparejado2'* game is for the player to turn over pairs of matching cards in the shortest possible time using few moves. 
